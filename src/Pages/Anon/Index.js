@@ -17,6 +17,16 @@ function Anon() {
         e.preventDefault();
         setIsSending(true);
 
+        if (message.length < 10) {
+            Swal.fire({
+                title: "Hey!",
+                html: "Please lenghten your text to 10 Characters or more",
+                timer: 3000,
+                timerProgressBar: true,
+            })
+            return setIsSending(false)
+        }
+
         const Toast = Swal.mixin({
             toast: true,
             position: "top-end",
@@ -47,7 +57,7 @@ function Anon() {
                 });
             }
         } catch (error) {
-            console.log(error)
+            console.log(error);
             Toast.fire({
                 icon: "error",
                 title: "Error sending message",
@@ -69,8 +79,10 @@ function Anon() {
                     onChange={setMessageHandler}
                     value={message}
                     disabled={isSending}
+                    minLength="10"
+                    required={true}
                 ></textarea>
-                <button disabled={isSending}>
+                <button disabled={isSending} type="submit">
                     {isSending ? <Spinner /> : "Send Message"}
                 </button>
             </form>

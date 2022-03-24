@@ -1,0 +1,85 @@
+.Anon {
+    text-align: center;
+    margin: 2em 0;
+    width: 100vw;
+
+    .Header {
+        h1,
+        h2 {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 4em;
+
+            @media screen and (max-width: 960px) {
+                font-size: 2.5em;
+            }
+        }
+
+        h2 {
+            font-size: 2em;
+
+            @media screen and (max-width: 960px) {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    .Form {
+        width: 40%;
+        margin: auto;
+        margin-top: 5em;
+
+        textarea {
+            outline: none;
+            border-radius: 7px;
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #dedede;
+            display: block;
+            margin: auto;
+            width: 100%;
+            padding: 1em;
+            font-size: 1.2em;
+            box-sizing: border-box;
+            height: 15em;
+
+            &:disabled {
+                background-color: #222222;
+            }
+        }
+
+        button {
+            width: 100%;
+            height: 45px;
+            font-size: 1.1em;
+            border-radius: 25px;
+            outline: none;
+            border: none;
+            margin-top: 2em;
+            cursor: pointer;
+
+            &:disabled {
+                cursor: not-allowed;
+            }
+        }
+
+        @media screen and (max-width: 960px) {
+            width: 92%;
+            margin-top: 1.5em;
+        }
+    }
+
+    .Hack {
+        width: 40%;
+        margin: auto;
+        margin-top: 1em;
+        text-align: left;
+
+        @media screen and (max-width: 960px) {
+            width: 92%;
+            margin-top: 1.5em;
+        }
+    }
+}

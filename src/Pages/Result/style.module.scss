@@ -1,0 +1,76 @@
+.Result {
+    text-align: center;
+    margin: 2em 0;
+
+    .Header {
+        margin-bottom: 2em;
+        h1,
+        h2 {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 4em;
+
+            @media screen and (max-width: 960px) {
+                font-size: 2.5em;
+            }
+        }
+
+        h2 {
+            font-size: 2em;
+
+            @media screen and (max-width: 960px) {
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    &s {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+        grid-auto-rows: minmax(100px auto);
+        width: 80%;
+        margin: auto;
+
+        @media screen and (max-width: 860px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media screen and (max-width: 600px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .Card {
+            // border: 1px solid #ffffff;
+            border-radius: 7px;
+            padding: 1em;
+            background-color: #222531;
+            text-align: left;
+
+            .Date{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1em 0 .5em;
+                border-bottom: 1px solid #FFFFFF;
+                margin-bottom: 1em;
+
+                span{
+                    &:nth-of-type(1){
+                        border: 1px solid #ffffff;
+                        border-radius: 100%;
+                        width: 25px;
+                        height: 25px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #FFFFFF;
+                        color: #000000;
+                    }
+                }
+            }
+        }
+    }
+}

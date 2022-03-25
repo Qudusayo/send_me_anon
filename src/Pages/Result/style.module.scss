@@ -34,6 +34,10 @@
         width: 80%;
         margin: auto;
 
+        @media screen and (max-width: 960px) {
+            width: 92%;
+        }
+
         @media screen and (max-width: 860px) {
             grid-template-columns: repeat(2, 1fr);
         }
